@@ -1,96 +1,22 @@
 package ru.netology.sqr;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class SQRServiceTest {
-
-    @Test
-    void squaresInRange() {
+    @ParameterizedTest
+    @CsvSource(value = {"'Values from homework', 200 ,300, 3",
+            "'Low range value lower', 99 ,1000000, 90",
+            "'Low range value normal', 100 ,1000000, 90",
+            "'Low range value higher', 101 ,1000000, 89",
+            "'High range value lower', 100 ,9800, 89",
+            "'High range value normal', 100 ,9801, 90",
+            "'High range value higher', 100 ,10000, 90"})
+    void squaresInRange(String testName, long range1, long range2, long expected) {
         SQRService service = new SQRService();
-
-        int range1 = 200;
-        int range2 = 300;
-        long expected = 3;
-
-        long actual = service.squaresInRange(range1, range2);
-
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    void squaresLowRangeTestL() {
-        SQRService service = new SQRService();
-
-        int range1 = 99;
-        int range2 = 100_000_000;
-        long expected = 90;
-
-        long actual = service.squaresInRange(range1, range2);
-
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    void squaresLowRangeTestM() {
-        SQRService service = new SQRService();
-
-        int range1 = 100;
-        int range2 = 100_000_000;
-        long expected = 90;
-
-        long actual = service.squaresInRange(range1, range2);
-
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    void squaresLowRangeTestH() {
-        SQRService service = new SQRService();
-
-        int range1 = 101;
-        int range2 = 100_000_000;
-        long expected = 89;
-
-        long actual = service.squaresInRange(range1, range2);
-
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    void squaresHighRangeTestL() {
-        SQRService service = new SQRService();
-
-        int range1 = 100;
-        int range2 = 9800;
-        long expected = 89;
-
-        long actual = service.squaresInRange(range1, range2);
-
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    void squaresHighRangeTestN() {
-        SQRService service = new SQRService();
-
-        int range1 = 100;
-        int range2 = 9801;
-        long expected = 90;
-
-        long actual = service.squaresInRange(range1, range2);
-
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    void squaresHighRangeTestH() {
-        SQRService service = new SQRService();
-
-        int range1 = 100;
-        int range2 = 9802;
-        long expected = 90;
 
         long actual = service.squaresInRange(range1, range2);
 
