@@ -16,7 +16,6 @@ class SQRServiceTest {
 
         long actual = service.squaresInRange(range1, range2);
 
-        // производим проверку (сравниваем ожидаемый и фактический):
         assertEquals(expected, actual);
     }
 
@@ -30,7 +29,6 @@ class SQRServiceTest {
 
         long actual = service.squaresInRange(range1, range2);
 
-        // производим проверку (сравниваем ожидаемый и фактический):
         assertEquals(expected, actual);
     }
 
@@ -44,7 +42,6 @@ class SQRServiceTest {
 
         long actual = service.squaresInRange(range1, range2);
 
-        // производим проверку (сравниваем ожидаемый и фактический):
         assertEquals(expected, actual);
     }
 
@@ -58,7 +55,6 @@ class SQRServiceTest {
 
         long actual = service.squaresInRange(range1, range2);
 
-        // производим проверку (сравниваем ожидаемый и фактический):
         assertEquals(expected, actual);
     }
 
@@ -72,7 +68,6 @@ class SQRServiceTest {
 
         long actual = service.squaresInRange(range1, range2);
 
-        // производим проверку (сравниваем ожидаемый и фактический):
         assertEquals(expected, actual);
     }
 
@@ -86,7 +81,6 @@ class SQRServiceTest {
 
         long actual = service.squaresInRange(range1, range2);
 
-        // производим проверку (сравниваем ожидаемый и фактический):
         assertEquals(expected, actual);
     }
 
@@ -100,7 +94,6 @@ class SQRServiceTest {
 
         long actual = service.squaresInRange(range1, range2);
 
-        // производим проверку (сравниваем ожидаемый и фактический):
         assertEquals(expected, actual);
     }
 }
